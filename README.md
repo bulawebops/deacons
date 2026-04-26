@@ -86,7 +86,7 @@
 | ~~Apr 12 or 19~~ | ~~Easter Sunday — Sacrament Only @ 10:30 am~~ | 🟡 Ward | ~~*Depends on Stake Conference week*~~ |
 | ~~Apr 13–19~~ | ~~Lehi Utah 3rd Stake Conference~~ | 🔵 Stake | ~~*Thu Apr 16 — Stake Youth Camp Kick Off @ Saratoga Springs Temple, 5–9 pm*~~ |
 | ~~Wed, Apr 22~~ | ~~Mutual Night — Pickleball~~ | 🟡 Ward | ~~*7:00 pm · Host: Priest Quorum*~~ |
-| ~~Thu, Apr 23~~ | ~~Youth Seminary Skyridge Luncheon~~ | 🟡 Ward | ~~*12:00 pm · 63 burgers · Host: Uyema, Moeai & Mahe*~~ |
+| ~~Thu, Apr 23~~ | ~~Youth Seminary Skyridge Luncheon~~ | 🟡 Ward | ~~*12:00 pm · 64 burgers · Host: Uyema, Moeai & Mahe*~~ |
 | **Sun, Apr 26** | **Deacons Quorum Presidency Meeting** | 🟡 Ward | *9:45 am · Conducting: Lueli Aumoeualogo* |
 | **Sun, Apr 26** | **BYC Meeting** | 🟡 Ward | *12:30 pm · Priest Quorum Conducting* |
 | **Mon, Apr 27** | **Skyridge Boys Volleyball Senior Night** *(Mutual — Deacons Quorum)* | 🟡 Ward | *5:00–9:00 pm · Fihi Fainga, Trey Mahe, Lennx Brown, Darius Lauti* |
