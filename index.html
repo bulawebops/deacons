@@ -494,6 +494,17 @@
   <strong>Lehi 41st Ward</strong> · Lehi Utah 3rd Stake · 2026<br/>
   All dates marked pending are tentative. Confirm with the bishopric.
 </footer>
+<script>
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
+  document.querySelectorAll(".event-card[data-date]").forEach(card => {
+    const eventDate = new Date(card.dataset.date + "T00:00:00");
+
+    if (eventDate < today) {
+      card.setAttribute("data-past", "");
+    }
+  });
+</script>
 </body>
 </html>
