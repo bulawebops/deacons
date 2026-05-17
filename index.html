@@ -282,6 +282,10 @@
     .section-divider { display: flex; align-items: center; gap: var(--spacing-md); margin: var(--spacing-xl) 0; }
     .section-divider-line { flex: 1; height: 1px; background: var(--stone); }
     .section-divider-label { font-size: .68rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .event-card[data-past] {
+  opacity: 0.45;
+  filter: grayscale(60%);
+}
   </style>
 </head>
 <body>
@@ -498,13 +502,44 @@
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  document.querySelectorAll(".event-card[data-date]").forEach(card => {
-    const eventDate = new Date(card.dataset.date + "T00:00:00");
+  document.querySelectorAll('.event-card').forEach(card => {
+    // Remove any hardcoded data-past attributes first
+    card.removeAttribute('data-past');
 
-    if (eventDate < today) {
-      card.setAttribute("data-past", "");
+    const badge = card.querySelector('.badge-num, .badge-range, .badge-day');
+    if (!badge) return;
+
+    const parent = card.closest('.month-section');
+    const monthName = parent?.querySelector('.month-name')?.textContent?.trim();
+    if (!monthName) return;
+
+    const year = 2026;
+    const monthIndex = new Date(`${monthName} 1, ${year}`).getMonth();
+
+    // Get the date text from the badge
+    const dateText = card.querySelector('.badge-num')?.textContent?.trim()
+      || card.querySelector('.badge-range')?.textContent?.trim();
+
+    if (!dateText) return;
+
+    // Parse single day (e.g. "17") or range start (e.g. "Apr 4–5" → Apr 4)
+    let eventDate;
+    const singleDay = parseInt(dateText);
+    if (!isNaN(singleDay)) {
+      eventDate = new Date(year, monthIndex, singleDay);
+    } else {
+      // Range like "Apr 4–5" or "May 27" — grab first number
+      const match = dateText.match(/(\d+)/);
+      if (match) {
+        eventDate = new Date(year, monthIndex, parseInt(match[1]));
+      }
+    }
+
+    if (eventDate && eventDate < today) {
+      card.setAttribute('data-past', '');
     }
   });
 </script>
+
 </body>
 </html>
